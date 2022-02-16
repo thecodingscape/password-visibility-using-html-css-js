@@ -1,0 +1,118 @@
+/*
+ importing font from google font
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root{
+    --font: "Poppins", sans-serif;
+    --primary-color: #6664ec;
+    --secondary-color: #424141;
+    --active-color:#5d5bca;
+    --bg-white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-family: var(--font);
+    background: var(--active-color);
+    min-height: 100vh;
+}
+.login{
+    position: relative;
+    display: block;
+    background: var(--bg-white);
+    padding: 20px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 7px 7px 20px rgba(0,0,0,0.05);
+}
+
+.login h2{
+    font-weight: 600;
+    font-size: 2em;
+    color: var(--primary-color);
+    line-height: 1.4em;
+}
+
+.login .line{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin-top: 4px;
+}
+
+.login .login-field{
+    max-width: 100%;
+    padding: 20px 0px;
+    display: block;
+}
+
+.login .login-item{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+.login label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+.login .login-field input
+{
+    display: inline-block;
+    width: 100%;
+    height: 24px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-family: var(--font);
+    font-size: 14px;
+
+}
+.login .login-field input:focus{
+    outline: none;
+    border: 2px solid var(--active-color);
+}
+
+#showPassword{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(296px) translateY(-26px);
+    color: var(--primary-color);
+}
+#showPassword:hover{
+    color: var(--active-color);
+}
+
+.login-btn{
+    width: 100%;
+    font-family: var(--font);
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    border:0;
+    height: 36px;
+    background: var(--primary-color);
+    color: var(--bg-white);
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.login-btn:hover{
+    background-color: var(--active-color);
+    transform: scale(1.02);
+    transition: all 0.2s ease-in;
+}
